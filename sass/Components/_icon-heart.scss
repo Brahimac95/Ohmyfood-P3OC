@@ -1,0 +1,65 @@
+
+.container-heart{
+    position: relative;
+    font-size: 30px;
+    cursor: pointer;
+    i{
+        position: absolute;
+        right: 0;
+        bottom: 18px;
+    }
+
+        .coeurvide{
+           opacity: 1;
+
+        &:hover{
+            opacity: 0;
+        }
+
+        }
+
+        .coeurplein{
+            color: transparent;
+            opacity: 0;
+            background: $coleur-heart;
+            background-clip: text;
+           -webkit-background-clip: text;
+            overflow: hidden;
+            transition: opacity .3s;
+
+           
+        &:hover{
+            opacity: 1;
+            animation: heartanimation .4s linear both;
+            overflow: hidden;
+
+        }   
+    }
+}
+
+/*====ANIMATION====*/
+
+@keyframes heartanimation {
+    0%{
+
+      opacity: 0.25;
+    
+    }
+    25%{
+        opacity: 0.33;
+        -webkit-transform: translateX(1.1);
+        //transform: translateX(1.1);
+    }
+
+    50%{
+        
+        opacity: 0.5;
+    }
+    
+    100%{
+
+        opacity: 1;
+        
+    }
+
+}

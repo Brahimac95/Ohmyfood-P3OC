@@ -1,0 +1,79 @@
+
+/*====LOADER===*/
+
+.loader-container{// remettre le point(.)
+    @include centrer;
+    position: fixed;
+    background: #202020;
+    inset: 0;
+    height: 100vh;
+    z-index: 100;
+    opacity: 0.95;
+    animation: disappear 3s forwards;
+    transform-origin: top;
+
+}
+.loading-spinner{
+    
+     //fill: #f2f2f2;
+     display: block;
+     position: relative;
+     width: 250px;
+     height: 250px;
+     border-radius: 50%;  
+     border: 7px solid transparent;
+     border-top-color: $coleur-primaire;
+     animation: spin 2s linear infinite; 
+
+
+    &::before, &::after{ // on les donne les même propriété
+              content: "";
+              position: absolute;
+              border-radius: 50%;
+              border: 7px solid transparent;
+              //@include centrer;
+    }  
+}
+
+.loading-spinner::before{
+    top:10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+   border-top-color: $coleur-secondaire;
+    animation: spin 1.5s linear infinite;
+    
+}
+.loading-spinner::after{// remettre le point(.)
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color: $coleur-tertiaire;
+    animation: spin 1.2s linear infinite;
+    
+}
+
+/*====ANIMATION====*/
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+   
+
+ @keyframes disappear{
+     
+    from{
+        transform: scale(1) ;
+    }
+     
+    to{
+        //transform: scaleY(2) ;
+        visibility: hidden;
+    }
+}

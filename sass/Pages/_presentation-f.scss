@@ -1,0 +1,127 @@
+
+/*====PRESNETATION===*/
+
+.presentation{
+    padding: 20px 20px;
+    flex-flow: column wrap;
+    background: #f2f2f2;
+    flex-direction: column;
+    gap: 10px 20px;
+    text-align: center;
+    p{
+        margin-top: 5px
+    }
+    h2{
+        font-family: 'Roboto'
+    }
+    
+}
+
+@include media-tabalette; /*=====VERSION TABLETTE=====*/
+
+
+
+@media all and( max-width: 768px ) { /* =====MOBILE=====*/
+
+    .fonctionnement h3{
+        margin-left: -150px;
+        margin-bottom: 20px;
+        }
+    
+    }
+    
+
+.fonctionnement{
+    @include centrer;
+    margin:  20px 0 /*20px*/;
+    font-weight: bold;
+    h3{
+        font-size: 22px;
+        margin-top: 10px;
+    }
+}
+/*.fonctionnement h2 {
+   //margin: 10px 0;
+}*/
+
+.fonctionnement .icones-fonctionnements {
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap:wrap;
+    & .icone-fonctionnement{
+        position: relative;
+        cursor: pointer;
+        @include centrer;
+        height: 70px;
+        width: 320px;
+        box-shadow: #d7d7d7 0 0 12px;
+        background: #f3f3f3b9;
+        border-radius: 15px;
+        margin:  20px 20px;
+        &:hover{
+            background: #9256dc59;
+            
+            box-shadow: #333 0 0 10px;
+            transform: scale(1.02); 
+            transition: .2s;
+            
+        }  
+    }
+}
+
+.icones-fonctionnements .fonction{
+    margin-left: 5px;
+    padding: 10px 30px;
+}
+.icone-fonctionnement .points{
+        margin-right: 2px; 
+          
+    }
+    .icone-fonctionnement .store{
+        color: $coleur-primaire;
+    }
+
+
+.choisissez::after{
+    font-weight: normal;
+    content: "1";
+    position: absolute;
+    @include centrer;
+    left: -10px;
+    top: 25px;
+    background: $coleur-primaire;
+    color: white;
+    height: 22px;
+    width: 22px;
+    border-radius: 30px;
+}
+.composez::after{
+    font-weight: normal;
+    content: "2";
+    position: absolute;
+    @include centrer;
+    left: -10px;
+    top: 25px;
+    bottom: 0;
+    background: $coleur-primaire;
+    color: white;
+    height: 22px;
+    width: 22px;
+    border-radius: 30px;
+}
+.degustez::after{
+    font-weight: normal;
+    content: "3";
+    position: absolute;
+    @include centrer;
+    left: -10px;
+    top: 25px;
+    bottom: 0;
+    background: $coleur-primaire;
+    color: white;
+    height: 22px;
+    width: 22px;
+    border-radius: 30px;
+}

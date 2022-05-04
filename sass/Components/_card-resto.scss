@@ -1,0 +1,111 @@
+
+/*====CARD RESTO===*/
+
+.restaurants{
+    background: #f6f6f6;
+    //margin: 50px 0;
+    padding-top: 20px;
+
+    & a{
+        text-decoration: none;
+        color: black;
+}
+
+.titre{
+    margin: 20px 30px ;
+    font-size: 20px;
+    
+} 
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    margin: 0 20px;
+
+    }
+}
+
+.card{
+    position: relative;
+    margin: 20px 0 20px 0;
+    width: 530px;
+    height: 290px;
+    margin-top: 20px;
+    box-shadow: #333 0 0 15px;
+    border-radius: 15px;
+    background: white;
+    transition: transform .60s cubic-bezier(0.18, 0.9, 0.58, 1);
+
+
+    .card-image img{
+        display: flex;
+        justify-content: center;
+        height: 190px;
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+        
+        
+    }
+
+    &:hover{
+        transform:  perspective(900px) rotateX(9deg) translateY(-6px) scale(1.02) ;
+       
+    }
+
+    
+}
+/*.card-left{
+    transition: .5s;
+    
+    &:hover{
+        transform-origin:center;
+        transform:perspective(800px) rotateY(20deg);
+    }
+ 
+}*/
+
+/*.card-right{
+   transition: .3s cubic-bezier(0.18, 0.9, 0.58, 1);
+   //will-change: transform;
+   
+    
+    &:hover{
+        transform: perspective(800px) rotateX(9deg) translateY(-6px);
+        transform-origin:center;
+      //transform: rotateX(9deg) //translateY(-6px) rotateX(9deg)//perspective(800px)  //rotateY(-20deg);
+    }
+}*/
+
+
+
+.card-image--new {
+    position: relative;
+    &::after{
+        width: 100px;
+        height: 40px;
+        content: "Nouveau";
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: $coleur-tertiaire;
+        color: $coleur-3e-foncee;
+        @include centrer;
+        border-radius: 3px;
+        font-weight: 500;
+    
+    }
+}
+
+
+.card-description  {
+    position: relative;
+    font-size: 18px;
+    margin: 20px 20px;
+  
+    p{
+        margin-top: 8px;
+        //font-size: 18px;
+    }
+}

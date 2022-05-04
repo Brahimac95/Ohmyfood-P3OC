@@ -1,0 +1,33 @@
+
+/*====LOGO INPUT====*/
+
+.header-logo{
+    @include centrer;
+    margin: 20px;
+    
+    & img{
+        height: 30px;
+        background: white;
+        
+    }
+}
+.header-icone-input{
+    
+    @include centrer;
+    background:#dbd9d9e7 ;
+    height: 60px;
+    box-shadow: inset 0 1px 2px 0 ;
+    & i{
+        margin-right: 10px;
+        
+        
+    }
+    & input{
+        border: none;
+        background: transparent;
+        font-size: 15px;
+        margin-right: -60px;
+        font-weight: bolder;
+    }
+    
+}

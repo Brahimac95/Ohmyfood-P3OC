@@ -1,0 +1,106 @@
+
+@mixin media-tabalette { //Media queries V tablette
+
+    @media all and( max-width:900px ) {
+        .fonctionnement{
+            @include centrer;
+            flex-flow: column wrap;
+
+        .icones-fonctionnements{
+                justify-content: center;
+                align-items: center;
+            }
+        }  
+    }    
+ 
+}
+
+@mixin centrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@mixin button{
+    font-family: 'Roboto';
+    cursor: pointer;
+    background: $coleur-degrade;
+    box-shadow: 0 0 2px #333;
+    color: white;
+    font-size: 16px;
+    height: 50px;
+    width: 220px;
+    border-radius: 25px; 
+    border-style: none;
+    overflow: hidden;
+
+    &:hover{
+        box-shadow: #333 0 0 10px;
+        opacity: 0.9;
+        transform: scale(1.02) ;
+    }
+}
+
+@mixin underline1-2 {
+
+    ::after{
+        display:block;
+        content: "";
+        height: 3px;
+        width: 50px;
+        background-color: $coleur-tertiaire;
+        position:absolute ;
+        bottom: 10px;
+        left: 2px;//22
+        top: 27px;//50
+    }
+}
+  
+@mixin underline3 { //Soulignements plats :E P D 
+    
+
+    ::after{
+        display:block;
+        content: "";
+        height: 3px;
+        width: 60px;
+        background-color: $coleur-tertiaire;
+        position:absolute ;
+        bottom: 10px;
+        left: 2px;
+        top: 27px;
+    }
+    
+}
+
+
+
+@mixin slid-apparition { /* Apparition des plats par groupe */
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: apparition-menu 0.8s 0.3s ease-out forwards;
+}  
+
+@mixin slid-apparition1{
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: apparition-menu 0.8s 0.5s ease-out forwards;
+}
+
+@mixin slid-apparition2 {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: apparition-menu 0.8s 0.6s ease-out forwards;
+}
+
+
+@keyframes apparition-menu{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
