@@ -1,7 +1,7 @@
 
 @mixin media-tabalette { //Media queries V tablette
 
-    @media all and( max-width:900px ) {
+    @media all and( max-width:992px ) {
         .fonctionnement{
             @include centrer;
             flex-flow: column wrap;

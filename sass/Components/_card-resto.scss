@@ -1,7 +1,9 @@
 
 /*====CARD RESTO===*/
 
+
 .restaurants{
+    width: 100%;
     background: #f6f6f6;
     //margin: 50px 0;
     padding-top: 20px;
@@ -13,7 +15,7 @@
 
 .titre{
     margin: 20px 30px ;
-    font-size: 20px;
+    font-size: 22px;
     
 } 
 .card-container{
@@ -21,7 +23,7 @@
     align-items: center;
     justify-content: space-evenly;
     flex-flow: wrap;
-    margin: 0 20px;
+    margin: 0 ;
 
     }
 }
@@ -56,27 +58,6 @@
 
     
 }
-/*.card-left{
-    transition: .5s;
-    
-    &:hover{
-        transform-origin:center;
-        transform:perspective(800px) rotateY(20deg);
-    }
- 
-}*/
-
-/*.card-right{
-   transition: .3s cubic-bezier(0.18, 0.9, 0.58, 1);
-   //will-change: transform;
-   
-    
-    &:hover{
-        transform: perspective(800px) rotateX(9deg) translateY(-6px);
-        transform-origin:center;
-      //transform: rotateX(9deg) //translateY(-6px) rotateX(9deg)//perspective(800px)  //rotateY(-20deg);
-    }
-}*/
 
 
 

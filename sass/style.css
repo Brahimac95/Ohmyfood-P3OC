@@ -12,7 +12,6 @@ html, body, ul, li, h1, h2, h3, h4, p, img {
 body {
   font-family: 'Roboto';
   font-size: 16px;
-  margin: 0 auto;
 }
 
 h2 {
@@ -190,6 +189,7 @@ button:hover {
 
 /*====CARD RESTO===*/
 .restaurants {
+  width: 100%;
   background: #f6f6f6;
   padding-top: 20px;
 }
@@ -201,7 +201,7 @@ button:hover {
 
 .restaurants .titre {
   margin: 20px 30px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .restaurants .card-container {
@@ -216,7 +216,7 @@ button:hover {
           justify-content: space-evenly;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
-  margin: 0 20px;
+  margin: 0;
 }
 
 .card {
@@ -254,26 +254,6 @@ button:hover {
           transform: perspective(900px) rotateX(9deg) translateY(-6px) scale(1.02);
 }
 
-/*.card-left{
-    transition: .5s;
-    
-    &:hover{
-        transform-origin:center;
-        transform:perspective(800px) rotateY(20deg);
-    }
- 
-}*/
-/*.card-right{
-   transition: .3s cubic-bezier(0.18, 0.9, 0.58, 1);
-   //will-change: transform;
-   
-    
-    &:hover{
-        transform: perspective(800px) rotateX(9deg) translateY(-6px);
-        transform-origin:center;
-      //transform: rotateX(9deg) //translateY(-6px) rotateX(9deg)//perspective(800px)  //rotateY(-20deg);
-    }
-}*/
 .card-image--new {
   position: relative;
 }
@@ -398,43 +378,65 @@ button:hover {
   display: flex;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
   main .image-table img {
     height: 250px;
   }
-  main .gastronomie-carte {
-    padding: 0 61px;
-  }
-}
-
-@media all and (max-width: 768px) {
-  main .image-table img {
-    height: 290px;
-  }
-  main .titre-icone h2 {
-    font-size: 22px;
-  }
   main .titre-icone .container-heart {
-    margin: -15px -10px;
+    margin: -20px 0;
   }
-  main .gastronomie-carte {
-    padding: 0;
-  }
-  main .gastronomie-carte h3 {
-    margin-left: 5px;
-  }
-  main .entrees-choix, main .plats-choix, main .desserts-choix {
-    width: 360px;
-    margin-left: -5px;
-    margin-right: 0;
+  main .gastronomie-carte .container-btn {
+    margin: 30px 110px;
   }
 }
 
+/*@media screen and( max-width: 767px ) {
+
+    main{
+       
+
+        .image-table img{
+            height: 290px //auto;
+        }
+
+        .titre-icone{
+            margin: -20px 20px;
+            h2{
+                font-size: 20px;
+                //margin-left: -15px;
+            }
+            .container-heart{
+                margin: -15px -10px;
+            }
+        }
+
+        .gastronomie-carte{
+            padding: 0 ;
+
+            h3{
+                margin-left: 5px;
+            }
+           
+        }
+    
+        .entrees-choix, .plats-choix, .desserts-choix{
+            //padding: 0;
+            width: 360px;// 90%;
+            margin-left: -5px;
+            margin-right: 0;
+           
+        }
+        
+    }
+
+}*/
 .gastronomie {
   position: relative;
+  width: 100%;
   margin-top: -60px;
+  z-index: 10;
   border-radius: 40px 40px 0 0;
-  background-color: #f4f4f4;
+  background-color: #f6f6f6;
   padding: 30px 20px;
 }
 
@@ -458,8 +460,9 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 20px 0;
@@ -557,7 +560,7 @@ button:hover {
 }
 
 .entrees-choix .prix-check .check, .plats-choix .prix-check .check, .desserts-choix .prix-check .check {
-  height: 80px;
+  height: 81px;
   width: 80px;
   background-color: #99E2D0;
   display: -webkit-box;
@@ -574,7 +577,7 @@ button:hover {
   margin-top: -41px;
   -webkit-transition: .3s;
   transition: .3s;
-  font-size: 30px;
+  font-size: 28px;
   color: white;
   font-weight: bold;
   transition: .3s;
@@ -590,7 +593,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px 0;
+  margin: 30px 110px;
 }
 
 /*====Animations*/
@@ -731,7 +734,19 @@ button:hover {
 }
 
 /*====FOOTER====*/
+@media screen and (max-width: 767px) {
+  .ohmyfood ul {
+    margin-left: -150px;
+  }
+  .ohmyfood h2 {
+    margin-left: -185px;
+  }
+}
+
 .ohmyfood {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,8 +764,8 @@ button:hover {
 
 .ohmyfood h2 {
   color: white;
-  margin: 10px 40px;
-  font-weight: normal;
+  padding-top: 15px;
+  font-weight: 200;
 }
 
 .ohmyfood ul a, .ohmyfood li {
@@ -789,6 +804,7 @@ button:hover {
 }
 
 .header-icone-input {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -818,62 +834,7 @@ button:hover {
 
 /*====PRESNETATION===*/
 .presentation {
-  padding: 20px 20px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  background: #f2f2f2;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  gap: 10px 20px;
-  text-align: center;
-}
-
-.presentation p {
-  margin-top: 5px;
-}
-
-.presentation h2 {
-  font-family: 'Roboto';
-}
-
-@media all and (max-width: 900px) {
-  .fonctionnement {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column wrap;
-            flex-flow: column wrap;
-  }
-  .fonctionnement .icones-fonctionnements {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-/*=====VERSION TABLETTE=====*/
-@media all and (max-width: 768px) {
-  /* =====MOBILE=====*/
-  .fonctionnement h3 {
-    margin-left: -150px;
-    margin-bottom: 20px;
-  }
-}
-
-.fonctionnement {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,28 +844,62 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f2f2f2;
+}
+
+.presentation h2 {
+  text-align: center;
+  font-family: 'Roboto';
+  margin: 15px 0;
+}
+
+.presentation .container-btn1 {
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .presentation {
+    width: 100%;
+  }
+  .presentation p {
+    text-align: center;
+    margin-left: 20px;
+  }
+  .fonctionnement h3 {
+    margin-left: -160px;
+    padding: 20px 0;
+  }
+}
+
+/*.presentation-fonctionnement{
+
+
+/*@include media-tabalette; =====VERSION TABLETTE=====
+
+}*/
+.fonctionnement {
   font-weight: bold;
 }
 
-.fonctionnement h3 {
-  font-size: 22px;
-  margin-top: 10px;
+.fonctionnement .fonctionnement-titre {
+  font-size: 20px;
+  padding: 20px 0;
+  text-align: center;
 }
 
-/*.fonctionnement h2 {
-   //margin: 10px 0;
-}*/
 .fonctionnement .icones-fonctionnements {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -925,9 +920,11 @@ button:hover {
   width: 320px;
   -webkit-box-shadow: #d7d7d7 0 0 12px;
           box-shadow: #d7d7d7 0 0 12px;
-  background: #f3f3f3b9;
+  background: #f2f2f2;
   border-radius: 15px;
-  margin: 20px 20px;
+  margin: 15px 25px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .fonctionnement .icones-fonctionnements .icone-fonctionnement:hover {
@@ -936,8 +933,6 @@ button:hover {
           box-shadow: #333 0 0 10px;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
-  -webkit-transition: .2s;
-  transition: .2s;
 }
 
 .icones-fonctionnements .fonction {

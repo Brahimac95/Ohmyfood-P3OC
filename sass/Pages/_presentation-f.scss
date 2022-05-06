@@ -1,55 +1,72 @@
 
 /*====PRESNETATION===*/
 
+
 .presentation{
-    padding: 20px 20px;
-    flex-flow: column wrap;
-    background: #f2f2f2;
+    width: 100%;
+    @include centrer;
     flex-direction: column;
-    gap: 10px 20px;
-    text-align: center;
-    p{
-        margin-top: 5px
-    }
+    background-color: #f2f2f2;
+
     h2{
-        font-family: 'Roboto'
+        text-align: center;
+        font-family: 'Roboto';
+        margin: 15px 0;
     }
-    
+
+    .container-btn1{
+        padding: 15px 0;
+    }   
+}
+@media screen and( max-width:767px) {
+    .presentation{
+        width: 100%;
+        p{
+           text-align: center;
+           margin-left: 20px;
+        }
+
+    }
+
+    .fonctionnement{
+
+        h3{
+           margin-left: -160px;
+           padding: 20px 0;
+           //margin-bottom: 20px;
+        }
+    }
+
 }
 
-@include media-tabalette; /*=====VERSION TABLETTE=====*/
+
+/*.presentation-fonctionnement{
 
 
+/*@include media-tabalette; =====VERSION TABLETTE=====
 
-@media all and( max-width: 768px ) { /* =====MOBILE=====*/
-
-    .fonctionnement h3{
-        margin-left: -150px;
-        margin-bottom: 20px;
-        }
-    
-    }
+}*/
     
 
 .fonctionnement{
-    @include centrer;
-    margin:  20px 0 /*20px*/;
+    
     font-weight: bold;
-    h3{
-        font-size: 22px;
-        margin-top: 10px;
+    
+    .fonctionnement-titre{
+        font-size: 20px;
+        padding: 20px 0;
+        text-align: center;
+        
     }
 }
-/*.fonctionnement h2 {
-   //margin: 10px 0;
-}*/
 
 .fonctionnement .icones-fonctionnements {
 
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
+        justify-content: space-around;
         flex-wrap:wrap;
+
     & .icone-fonctionnement{
         position: relative;
         cursor: pointer;
@@ -57,15 +74,15 @@
         height: 70px;
         width: 320px;
         box-shadow: #d7d7d7 0 0 12px;
-        background: #f3f3f3b9;
+        background: #f2f2f2;
         border-radius: 15px;
-        margin:  20px 20px;
+        margin:  15px 25px;
+        transition: .3s;
+
         &:hover{
             background: #9256dc59;
-            
             box-shadow: #333 0 0 10px;
             transform: scale(1.02); 
-            transition: .2s;
             
         }  
     }

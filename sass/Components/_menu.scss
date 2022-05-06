@@ -16,31 +16,40 @@
        
     }
 }
-@media screen and(max-width:900px) {
+@media screen and(max-width:992px) {
 
     main{
-
+        
         .image-table img{
             height: 250px;
         }
+        .titre-icone .container-heart{
+            margin: -20px 0;
+        }
 
         .gastronomie-carte{
-            padding: 0 61px;
+            //padding: 0 61px;
+
+            .container-btn{
+                margin: 30px 110px;
+            }
         }
     }  
 }
 
-@media all and( max-width: 768px ) {
+/*@media screen and( max-width: 767px ) {
 
     main{
+       
+
         .image-table img{
             height: 290px //auto;
         }
 
         .titre-icone{
-            //margin: -20px 20px;
+            margin: -20px 20px;
             h2{
-                font-size: 22px;
+                font-size: 20px;
                 //margin-left: -15px;
             }
             .container-heart{
@@ -59,22 +68,23 @@
     
         .entrees-choix, .plats-choix, .desserts-choix{
             //padding: 0;
-           width: 360px;// 90%;
-           margin-left: -5px;
-           margin-right: 0;
+            width: 360px;// 90%;
+            margin-left: -5px;
+            margin-right: 0;
            
         }
         
     }
 
-}
+}*/
+
 .gastronomie{
     position: relative;
-    //width: 100%;
+    width: 100%;
     margin-top: -60px;
-    //z-index: 10;
+    z-index: 10;
     border-radius: 40px 40px 0 0;
-    background-color: #f4f4f4;
+    background-color: #f6f6f6;
     padding: 30px 20px;
 }
 
@@ -96,13 +106,13 @@
 .gastronomie-carte{
     position: relative;
     display: flex;
-    justify-content: space-around; //space-evenly
+    justify-content: space-evenly; //space-evenly
     //flex-direction: column;
     flex-wrap: wrap;
     margin: 20px 0 ;
     padding: 50px 50px;
     flex-wrap: wrap;
-    //background: #9256db36;
+    //background: #a56fe736;
     
 
     h3{
@@ -180,7 +190,8 @@
         }
         
         .check{
-            height: 80px;
+            height: 81px;
+           // height:auto;
             width: 80px;
             background-color: $coleur-tertiaire;
             @include centrer;
@@ -188,7 +199,7 @@
             margin-right:-80px;
             margin-top: -41px;
             transition: .3s;
-            font-size: 30px;
+            font-size: 28px;
             color: white;
             font-weight: bold;
             //opacity: 0;
@@ -202,7 +213,8 @@
 
 .container-btn{
     @include centrer;
-     margin: 40px 0;
+     //margin: 40px 0;
+     margin: 30px 110px;
     
   }
 

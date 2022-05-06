@@ -1,9 +1,26 @@
     
 /*====FOOTER====*/
 
+
+@media screen and ( max-width: 767px) {
+    
+.ohmyfood{
+
+        ul{
+            margin-left: -150px;
+        }
+
+        h2{
+            margin-left: -185px;
+        }
+    }
+    
+}
+
 .ohmyfood {
      
     //z-index:2 ;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,9 +31,9 @@
     
     h2{
         color: white;
-        margin: 10px 40px;
-        //padding-top: 10px;
-        font-weight: normal;
+        //margin: 10px 40px;
+        padding-top: 15px;
+        font-weight: 200;
     }
     
         ul a ,li {

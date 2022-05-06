@@ -1,6 +1,7 @@
 
 /*====LOGO INPUT====*/
 
+
 .header-logo{
     @include centrer;
     margin: 20px;
@@ -12,7 +13,7 @@
     }
 }
 .header-icone-input{
-    
+    width: 100%;
     @include centrer;
     background:#dbd9d9e7 ;
     height: 60px;
