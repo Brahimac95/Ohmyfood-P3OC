@@ -10,6 +10,7 @@ html, body, ul, li, h1, h2, h3, h4, p, img {
 }
 
 body {
+  max-width: 1600px;
   font-family: 'Roboto';
   font-size: 16px;
 }
@@ -379,57 +380,49 @@ button:hover {
 }
 
 @media screen and (max-width: 992px) {
+  /*====VERSION TABLETTE====*/
   main .image-table img {
     height: 250px;
   }
   main .titre-icone .container-heart {
-    margin: -20px 0;
+    margin: -12px 0;
   }
   main .gastronomie-carte .container-btn {
     margin: 30px 110px;
   }
 }
 
-/*@media screen and( max-width: 767px ) {
+@media screen and (max-width: 767px) {
+  /*====VERSION MOBILE====*/
+  main .image-table img {
+    height: 290px;
+  }
+  main .titre-icone {
+    margin: -20px 20px;
+  }
+  main .titre-icone h2 {
+    font-size: 12px;
+  }
+  main .titre-icone .container-heart {
+    margin: -15px -5px;
+  }
+  main .gastronomie-carte {
+    padding: 0;
+  }
+  main .gastronomie-carte h3 {
+    margin-left: 5px;
+  }
+  main .entrees-choix, main .plats-choix, main .desserts-choix {
+    width: 360px;
+    margin-left: -5px;
+    margin-right: 0;
+    font-size: 15px;
+  }
+  main .entrees-choix .description-detail h4, main .entrees-choix p, main .plats-choix .description-detail h4, main .plats-choix p, main .desserts-choix .description-detail h4, main .desserts-choix p {
+    font-size: 16px;
+  }
+}
 
-    main{
-       
-
-        .image-table img{
-            height: 290px //auto;
-        }
-
-        .titre-icone{
-            margin: -20px 20px;
-            h2{
-                font-size: 20px;
-                //margin-left: -15px;
-            }
-            .container-heart{
-                margin: -15px -10px;
-            }
-        }
-
-        .gastronomie-carte{
-            padding: 0 ;
-
-            h3{
-                margin-left: 5px;
-            }
-           
-        }
-    
-        .entrees-choix, .plats-choix, .desserts-choix{
-            //padding: 0;
-            width: 360px;// 90%;
-            margin-left: -5px;
-            margin-right: 0;
-           
-        }
-        
-    }
-
-}*/
 .gastronomie {
   position: relative;
   width: 100%;
@@ -437,7 +430,7 @@ button:hover {
   z-index: 10;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
-  padding: 30px 20px;
+  padding: 20px 0;
 }
 
 .gastronomie .titre-icone {
@@ -525,14 +518,14 @@ button:hover {
   text-overflow: ellipsis;
   overflow: hidden;
   z-index: 100;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .entrees-choix .description-detail p, .plats-choix .description-detail p, .desserts-choix .description-detail p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 10px;
   z-index: 200;
 }
@@ -560,7 +553,7 @@ button:hover {
 }
 
 .entrees-choix .prix-check .check, .plats-choix .prix-check .check, .desserts-choix .prix-check .check {
-  height: 81px;
+  height: 82px;
   width: 80px;
   background-color: #99E2D0;
   display: -webkit-box;
@@ -574,7 +567,7 @@ button:hover {
           align-items: center;
   border-radius: 0 13px 13px 0;
   margin-right: -80px;
-  margin-top: -41px;
+  margin-top: -40px;
   -webkit-transition: .3s;
   transition: .3s;
   font-size: 28px;
