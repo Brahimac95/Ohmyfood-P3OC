@@ -67,9 +67,9 @@
         }
     
         .entrees-choix, .plats-choix, .desserts-choix{
-            //padding: 0;
-            width: 360px;
-            margin-left: -5px;
+            padding: 10px;
+            width: 346px; //360px;
+            margin-left: 0;
             margin-right: 0;
             font-size: 15px;
 
@@ -111,11 +111,11 @@
 .gastronomie-carte{
     position: relative;
     display: flex;
-    justify-content: space-evenly; //space-evenly
+    justify-content: space-around; //space-evenly
     //flex-direction: column;
     flex-wrap: wrap;
     margin: 20px 0 ;
-    padding: 50px 50px;
+    padding: 50px 50px !important;
     flex-wrap: wrap;
     //background: #a56fe736;
     
@@ -148,7 +148,7 @@
     padding: 10px; //15px
     border-radius: 20px;
     box-shadow: 0 5px 8px #c1c1c1;
-    background-color: #fff;
+    background-color: #ffff;
     //border: 1px solid black;
     margin: 15px 20px;
     transition: transform .3s ease;
