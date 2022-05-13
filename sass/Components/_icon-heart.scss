@@ -18,7 +18,7 @@
 
         }
 
-        .coeurplein{
+        .coeurplein{ // Transparence du coeur plein quand il n'y pas de survol ou de clic en v mobile
             color: transparent;
             opacity: 0;
             background: $coleur-heart;
@@ -28,7 +28,7 @@
             transition: opacity .3s;
 
            
-        &:hover{
+        &:hover{ // Effets du coeur au survol ou au clic en v mobile
             opacity: 1;
             animation: heartanimation .4s linear both;
             overflow: hidden;
@@ -39,7 +39,7 @@
 
 /*====ANIMATION====*/
 
-@keyframes heartanimation {
+@keyframes heartanimation { //Remplissage progressif du coeur plein
     0%{
 
       opacity: 0.25;

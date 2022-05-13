@@ -1,9 +1,9 @@
 
 /*====LOADER===*/
 
-.loader-container{// remettre le point(.)
+.loader-container{ 
     @include centrer;
-    position: fixed;
+    position: fixed; // Pour que le loader reste fixer au centre de l'ecran
     background: #202020;
     inset: 0;
     height: 100vh;
@@ -13,38 +13,38 @@
     transform-origin: top;
 
 }
-.loading-spinner{
+.loading-spinner{ // Cercle transformé en arc violet
     
-     //fill: #f2f2f2;
-     display: block;
-     position: relative;
-     width: 250px;
-     height: 250px;
-     border-radius: 50%;  
-     border: 7px solid transparent;
-     border-top-color: $coleur-primaire;
-     animation: spin 2s linear infinite; 
+    //fill: #f2f2f2;
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;  
+    border: 7px solid transparent;
+    border-top-color: $coleur-primaire;
+    animation: spin 2s linear infinite; 
 
 
-    &::before, &::after{ // on les donne les même propriété
-              content: "";
-              position: absolute;
-              border-radius: 50%;
-              border: 7px solid transparent;
-              //@include centrer;
+    &::before, &::after{ // On les donne les mêmes propriétés
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 7px solid transparent;
+        
     }  
 }
 
-.loading-spinner::before{
+.loading-spinner::before{ // Arc rose
     top:10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
-   border-top-color: $coleur-secondaire;
+    border-top-color: $coleur-secondaire;
     animation: spin 1.5s linear infinite;
     
 }
-.loading-spinner::after{// remettre le point(.)
+.loading-spinner::after{ // Arc vert
     top: 25px;
     left: 25px;
     right: 25px;
@@ -66,7 +66,7 @@
 }
    
 
- @keyframes disappear{
+ @keyframes disappear{ // Disparition du loader après chargement
      
     from{
         transform: scale(1) ;

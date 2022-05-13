@@ -22,6 +22,7 @@
 
 }
 
+
 @mixin button{
     font-family: 'Roboto';
     cursor: pointer;
@@ -35,14 +36,14 @@
     border-style: none;
     overflow: hidden;
 
-    &:hover{
+    &:hover{ //Survol du bouton
         box-shadow: #333 0 0 10px;
         opacity: 0.9;
-        transform: scale(1.02) ;
+        transform: scale(1.03) ;
     }
 }
 
-@mixin underline1-2 {
+@mixin underline1-2 { //Soulignements plats :E P D 
 
     ::after{
         display:block;
@@ -75,8 +76,9 @@
 }
 
 
+/* Mixins animation de l'apparition des plats par groupe */
 
-@mixin slid-apparition { /* Apparition des plats par groupe */
+@mixin slid-apparition { 
     opacity: 0;
     transform: translateY(-20px);
     animation: apparition-menu 0.8s 0.3s ease-out forwards;
@@ -85,13 +87,13 @@
 @mixin slid-apparition1{
     opacity: 0;
     transform: translateY(-20px);
-    animation: apparition-menu 0.8s 0.5s ease-out forwards;
+    animation: apparition-menu 0.8s 0.6s ease-out forwards;
 }
 
 @mixin slid-apparition2 {
     opacity: 0;
     transform: translateY(-20px);
-    animation: apparition-menu 0.8s 0.6s ease-out forwards;
+    animation: apparition-menu 0.8s 0.7s ease-out forwards;
 }
 
 

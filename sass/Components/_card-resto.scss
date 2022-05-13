@@ -5,7 +5,6 @@
 .restaurants{
     width: 100%;
     background: #f6f6f6;
-    //margin: 50px 0;
     padding-top: 20px;
 
     & a{
@@ -51,7 +50,7 @@
         
     }
 
-    &:hover{
+    &:hover{ //Effets au survol des card
         transform:  perspective(900px) rotateX(9deg) translateY(-6px) scale(1.02) ;
        
     }
@@ -61,7 +60,7 @@
 
 
 
-.card-image--new {
+.card-image--new { // Etiquette verte Nouveau
     position: relative;
     &::after{
         width: 100px;

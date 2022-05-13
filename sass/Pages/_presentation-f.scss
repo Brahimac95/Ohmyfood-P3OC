@@ -18,7 +18,7 @@
         padding: 15px 0;
     }   
 }
-@media screen and( max-width:767px) {
+@media screen and( max-width:767px) { // MOBILE
     .presentation{
         width: 100%;
         p{
@@ -102,7 +102,9 @@
     }
 
 
-.choisissez::after{
+/* Numéros fonctionnement */
+
+.choisissez::after{ 
     font-weight: normal;
     content: "1";
     position: absolute;
@@ -115,7 +117,7 @@
     width: 22px;
     border-radius: 30px;
 }
-.composez::after{
+.composez::after{ 
     font-weight: normal;
     content: "2";
     position: absolute;

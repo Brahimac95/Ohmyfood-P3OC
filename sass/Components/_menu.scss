@@ -4,8 +4,8 @@
 .image-table {
     //position: relative;
     display: block;
+
     img{
-        //object-position: center; //bottom;
         z-index: 1;
         width: 100%;
         object-fit: cover;
@@ -15,6 +15,51 @@
        
        
     }
+}
+
+@media screen and( max-width: 767px ) { /*====VERSION MOBILE====*/
+
+    main{
+       
+
+        .image-table img{
+            height: 290px ;
+        }
+
+        .titre-icone{
+            margin: -20px 20px;
+            h2{
+                font-size: 12px;
+                //margin-left: -15px;
+            }
+            .container-heart{
+                margin: -15px -5px;
+            }
+        }
+
+        .gastronomie-carte{
+            padding: 0 ;
+
+            h3{
+                margin-left: 5px;
+            }
+        }
+    
+        .entrees-choix, .plats-choix, .desserts-choix{
+            padding: 10px;
+            width: 346px; //360px;
+            margin-left: 0;
+            margin-right: 0;
+            font-size: 15px;
+
+            .description-detail h4,p{
+                font-size: 16px;
+            }
+           
+        }
+        
+    }
+
 }
 @media screen and(max-width:992px) { /*====VERSION TABLETTE====*/
 
@@ -37,63 +82,18 @@
     }  
 }
 
-@media screen and( max-width: 767px ) { /*====VERSION MOBILE====*/
 
-    main{
-       
-
-        .image-table img{
-            height: 290px //auto;
-        }
-
-        .titre-icone{
-            margin: -20px 20px;
-            h2{
-                font-size: 12px;
-                //margin-left: -15px;
-            }
-            .container-heart{
-                margin: -15px -5px;
-            }
-        }
-
-        .gastronomie-carte{
-            padding: 0 ;
-
-            h3{
-                margin-left: 5px;
-            }
-           
-        }
-    
-        .entrees-choix, .plats-choix, .desserts-choix{
-            padding: 10px;
-            width: 346px; //360px;
-            margin-left: 0;
-            margin-right: 0;
-            font-size: 15px;
-
-            .description-detail h4,p{
-                font-size: 16px;
-            }
-           
-        }
-        
-    }
-
-}
-
-.gastronomie{
-    position: relative;
-    width: 100%;
+.gastronomie{ //Grand bloc
+    position: relative; //position relative + margin-top negative pour placer le bloc gris au dessus de l'img
     margin-top: -60px;
+    width: 100%;
     z-index: 10;
     border-radius: 40px 40px 0 0;
     background-color: #f6f6f6;
     padding: 20px 0; //20px;
 }
 
-.gastronomie{ //à la française et l'icone coeur
+.gastronomie{ // Titre h2 et icone coeur
    
     .titre-icone{
         position: relative;
@@ -108,16 +108,16 @@
 }
 
 
-.gastronomie-carte{
+.gastronomie-carte{ // Mise en place des 3 éléments E, P, D
     position: relative;
     display: flex;
-    justify-content: space-around; //space-evenly
+    justify-content: space-around;
     //flex-direction: column;
     flex-wrap: wrap;
     margin: 20px 0 ;
-    padding: 50px 50px !important;
+    padding: 50px 50px ;
     flex-wrap: wrap;
-    //background: #a56fe736;
+    
     
 
     h3{
@@ -128,23 +128,22 @@
         
     } 
 
-    .titre-underline{
+    .titre-underline{ // pseudo-élément pour le soulignement
         //position: relative;
         @include underline1-2;
     }
 }
 
-.titre-underline3{
+.titre-underline3{ // pseudo-élément pour le soulignement
 @include underline3;
 }
 
 .entrees-choix, .plats-choix, .desserts-choix{
     //gap: 16px;
-    height: auto;
     position: relative;
     width: 400px;
     //width: 100%;
-    height: 80px;
+    height: 79px;
     padding: 10px; //15px
     border-radius: 20px;
     box-shadow: 0 5px 8px #c1c1c1;
@@ -162,7 +161,7 @@
            white-space: nowrap;
            text-overflow: ellipsis;
            overflow: hidden;
-           z-index: 100;
+           //z-index: 10;
            font-size: 18px;
 
        }
@@ -172,12 +171,13 @@
             overflow: hidden;
             font-size: 16px;
             margin-top: 10px;
-            z-index: 200;
+            //z-index: 20;
         }
         
     }
 
-    .prix-check{
+
+    .prix-check{ // Positionnement du prix et du check
         display: flex;
         justify-content: space-between;
         height: 100%;
@@ -194,15 +194,14 @@
           
         }
         
-        .check{
+        .check{ // Icone check
             height: 82px;
-           // height:auto;
             width: 80px;
             background-color: $coleur-tertiaire;
             @include centrer;
             border-radius: 0 13px 13px 0;
             margin-right:-80px;
-            margin-top: -40px;
+            margin-top: -41px;
             transition: .3s;
             font-size: 28px;
             color: white;
@@ -216,16 +215,8 @@
 
 }
 
-.container-btn{
-    @include centrer;
-     //margin: 40px 0;
-     margin: 30px 110px;
-    
-  }
-
-/*====Animations*/
+/*====Animation: Appirition progressive des plats */
   
-
 .slidtop{
     @include slid-apparition;   
  }
@@ -238,31 +229,39 @@
      @include slid-apparition2;
  }
 
-.entrees-choix, .plats-choix, .desserts-choix{
+ .entrees-choix, .plats-choix, .desserts-choix{
+     
+     &:hover{
+         -webkit-transition: .3s ease-in-out;
+         transition: .3s ease-in-out;
+         .description-detail{
+             width: 60%;
+             z-index: 100;
+         }
+ 
+         .prix-check{
+             z-index: 10;
+             margin-right: 0;
+             animation: check-move .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+             -webkit-animation: check-move .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+ 
+             .check-rotation{
+                 animation: rotation-icone .5s ease-in-out;
+                 -webkit-animation:  rotation-icone .5s ease-in-out ;
+             }
+         }
+     }
+ }
+.container-btn{
+    @include centrer;
+     //margin: 40px 0;
+     margin: 30px 110px;
     
-    &:hover{
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
-        .description-detail{
-            width: 60%;
-            z-index: 100;
-        }
+  }
 
-        .prix-check{
-            z-index: 10;
-            margin-right: 0;
-            animation: check-move .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            -webkit-animation: check-move .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-            .check-rotation{
-                animation: rotation-icone .5s ease-in-out;
-                -webkit-animation:  rotation-icone .5s ease-in-out ;
-            }
-        }
-    }
-}
 
-/*===ANIMATIONS===*/
+/*===Animation:Slid de la gauche vers la droite du check===*/
 
 @keyframes check-move{
     from{
